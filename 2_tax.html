@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>TAX Calculator</h1>
+      <h3>Enter Your Salary</h3>
+      <input type="number" id="salary" />
+      <input type="submit" onclick="math()" />
+      <h2 id="tax"></h2>
+
+      <script>
+        function math() {
+          var s = parseInt(document.getElementById("salary").value);
+          var tax = (s * 5) / 100;
+
+          document.getElementById("tax").innerHTML = "Payable Tax = " + tax;
+        }
+      </script>
+    </center>
+  </body>
+</html>
