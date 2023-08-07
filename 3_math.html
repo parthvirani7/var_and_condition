@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>Math Formula</h1>
+      <h2>2a (a<sup>2</sup> + b<sup>2</sup>) 2b</h2>
+      <h3>Enter the value of A : <input type="number" id="a" /></h3>
+      <h3>Enter the value of B : <input type="number" id="b" /></h3>
+      <input type="submit" onclick="math()" />
+      <h3 id="ans"></h3>
+      <h2 id="oans"></h2>
+
+      <script>
+        function math() {
+          var a = parseInt(document.getElementById("a").value);
+          var b = parseInt(document.getElementById("b").value);
+          var ans =  a + a * (a * a + b * b) *  b + b;
+
+          document.getElementById("ans").innerHTML =
+            "2*" +
+            a +
+            " ( " +
+            a +
+            "<sup>2</sup> +" +
+            b +
+            "<sup>2</sup> ) 2*" +
+            b;
+
+          document.getElementById("oans").innerHTML = "Answer = " + ans;
+        }
+      </script>
+    </center>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <h1>Height Measurement</h1>
+      Enter Your Height in cm : <input type="number" id="h" /> <br />
+      <br />
+
+      <input type="submit" onclick="math()" />
+
+      <h3 id="ans"></h3>
+      <script>
+        function math() {
+          var h = parseInt(document.getElementById("h").value);
+
+          if (h > 165) {
+            document.getElementById("ans").innerHTML = "You are Tall";
+          } else {
+            document.getElementById("ans").innerHTML = "You are Short";
+          }
+        }
+      </script>
+    </center>
+  </body>
+</html>
